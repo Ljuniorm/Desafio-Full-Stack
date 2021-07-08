@@ -39,5 +39,6 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.349);
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 </style>
