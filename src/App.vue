@@ -20,7 +20,10 @@ export default {
 </script>
 
 <style>
-html {
-  overflow: hidden !important;
+html{
+  overflow: auto !important;
+}
+.v-main{
+  background-image: linear-gradient(rgb(68, 68, 68), rgb(36, 36, 36));
 }
 </style>

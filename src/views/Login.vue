@@ -28,7 +28,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgb(68, 68, 68), rgb(36, 36, 36));
+
 }
 .login-box {
   height: 500px;

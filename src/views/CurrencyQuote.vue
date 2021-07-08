@@ -1,17 +1,19 @@
 <template>
   <div class="container-style">
-    <div class="container-analytics">
+    <div class="container-analytics"  :class="$vuetify.breakpoint.mdAndUp? '' : 'ma-12'" :style="$vuetify.breakpoint.mdAndUp ? 'height: 62vh' : 'height: 97%'">
       <v-row class="py-10" no-gutters justify="center">
+        <v-col align="center">
         <h2 class="white--text">COTAÇÃO DAS PRINCIPAIS MOEDAS PARA O REAL</h2>
+        </v-col>
       </v-row>
       <v-row class="px-6" no-gutters>
         <v-divider></v-divider>
       </v-row>
       <div class="container-currencies">
-        <v-row no-gutters justify="center">
+        <v-row v-if="currencies" no-gutters justify="center">
           <v-col
             align="center"
-            cols="3"
+            :cols="$vuetify.breakpoint.mdAndUp ? '3' : '12'"
             v-for="(currency, i) in currencies"
             :key="i"
           >
@@ -45,6 +47,9 @@
             </v-card>
           </v-col>
         </v-row>
+        <v-row v-else justify="center" no-gutters>
+        <v-progress-linear  indeterminate color="black" ></v-progress-linear>
+        </v-row>
       </div>
     </div>
   </div>
@@ -69,16 +74,14 @@ export default {
 
 <style scoped>
 .container-style {
-  height: calc(100vh - 65px);
+  height: 100%;
   margin: 0px !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgb(68, 68, 68), rgb(36, 36, 36));
 }
 .container-analytics {
   background-color: white;
-  height: 62vh;
   width: 80vw;
   border-radius: 9px;
   background-color: rgba(77, 77, 77, 0.411);
