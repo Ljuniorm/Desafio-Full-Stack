@@ -3,7 +3,7 @@
     <div
       class="container-analytics"
       :class="$vuetify.breakpoint.mdAndUp ? '' : 'ma-12'"
-      :style="$vuetify.breakpoint.mdAndUp ? 'height: 62vh' : 'height: 97%'"
+      :style="$vuetify.breakpoint.mdAndUp ? 'height: 72vh' : 'height: 97%'"
     >
       <v-row v-if="currency" no-gutters justify="end">
         <v-btn
@@ -15,7 +15,7 @@
           ><span class="white--text">Ver Todas</span>
         </v-btn>
       </v-row>
-      <v-row class="pb-10 mt-8" no-gutters justify="center">
+      <v-row class="pb-10 mt-8 px-8"  no-gutters justify="center">
         <v-col align="center">
           <h2 class="white--text">COTAÇÃO DAS PRINCIPAIS MOEDAS PARA O REAL</h2>
         </v-col>
@@ -99,10 +99,6 @@ export default {
   },
   methods: {
     viewGrafic(item) {
-      console.log(
-        "🚀 ~ file: CurrencyQuote.vue ~ line 105 ~ viewGrafic ~ item",
-        item
-      );
       this.hover = null;
       this.$store.commit("SET_CURRENCY", item);
     },
