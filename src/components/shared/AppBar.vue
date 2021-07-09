@@ -3,7 +3,7 @@
     <h2 class="white--text">Desafio Full Stack</h2>
     <v-spacer></v-spacer>
     <v-btn @click="goLogin" target="_blank" text>
-      <v-icon>mdi-open-in-new</v-icon>
+      <v-icon>mdi-logout</v-icon>
     </v-btn>
   </v-app-bar>
 </template>

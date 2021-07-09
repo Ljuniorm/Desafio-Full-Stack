@@ -4,6 +4,8 @@ import * as getters from './getters'
 
 const state = {
   currencies: null,
+  currency: null,
+  todayDate: null
 }
 
 export default {
